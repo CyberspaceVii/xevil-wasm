@@ -1,0 +1,5 @@
+xevil-web/out-wasm/
+xevil-web/out-native/
+xevil-web/out-release/
+xevil-web/.tmp/
+__pycache__/

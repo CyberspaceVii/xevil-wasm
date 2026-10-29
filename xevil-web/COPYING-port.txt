@@ -1,0 +1,23 @@
+XEvil WebAssembly port for cyberspace7.org
+========================================
+
+This directory (xevil-web/) holds the port of XEvil 2.1 beta to the browser:
+an Xlib-on-SDL2 shim (xshim.cpp + xinc/X11/*.h), a frame-driven main
+(xevil_main.cpp), the emscripten glue (glue.js) and the build scripts.
+
+XEvil(TM) Copyright (C) 1994,2000 Steve Hardt and Michael Judge
+http://www.xevil.com (upstream tree used: https://github.com/lvella/xevil)
+
+XEvil is free software under the GNU General Public License, version 2 or
+(at your option) any later version; see ../xevil-src/gpl.txt. The port files
+here are combined with it to form the distributed program and are released
+under the same terms (GPLv2 or later).
+
+Fonts: fonts/6x13.bdf and fonts/9x15B.bdf are from X.org font-misc-misc 1.1.3,
+public domain (fonts/COPYING); xfonts.h is generated from them by bake-fonts.py.
+The vendored xinc/X11/{X,Xatom,keysym,keysymdef,cursorfont}.h are X.Org
+headers under the MIT/X11 licence (see their header comments).
+
+Rebuild: ./build-wasm.sh  (emscripten; output out-wasm/xevil.{js,wasm})
+         ./build-native-sdl.sh  (g++ + SDL2; out-native/xevil-sdl)
+Upstream files patched at build time are listed in patch-sources.sh.

@@ -1,0 +1,3 @@
+[submodule "xevil-src"]
+	path = xevil-src
+	url = https://github.com/lvella/xevil.git
