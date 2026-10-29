@@ -6,14 +6,14 @@ emscripten. Single player against the game's AI. Runs at https://cyberspace7.org
 
 ## Layout
 
-- `xevil-src/` upstream XEvil (lvella/xevil), unmodified, pinned as a submodule
+- `xevil-src/` upstream XEvil (lvella/xevil), vendored unmodified at commit a016022
 - `xevil-web/` the port: the Xlib/SDL2 shim (`xshim.cpp` + `xinc/X11/*.h`), a
   frame-driven main loop (`xevil_main.cpp`), the emscripten glue (`glue.js`),
   and the build scripts
 
 ## Build
 
-    git clone --recurse-submodules https://github.com/CyberspaceVii/xevil-wasm
+    git clone https://github.com/CyberspaceVii/xevil-wasm
     cd xevil-wasm/xevil-web
     ./build-wasm.sh          # emscripten, output out-wasm/xevil.{js,wasm}
     ./build-native-sdl.sh    # g++ + SDL2, output out-native/xevil-sdl
